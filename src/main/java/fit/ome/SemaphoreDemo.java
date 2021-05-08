@@ -17,6 +17,8 @@ public class SemaphoreDemo {
     public static void main(String[] args) throws IOException {
         // 默认非公平 NonfairSync
         // 可以通过指定第二个参数，明确是公平还是非公平
+        // 公平锁的场景，会优先将锁分配给等待时间最长的（FIFO）原则
+        // 非公平的场景，同时通知所有等待线程，争抢锁
 //        final Semaphore sph = new Semaphore(1,true);
         final Semaphore sph = new Semaphore(1);
 
